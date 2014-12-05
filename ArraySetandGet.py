@@ -8,14 +8,14 @@
 #               which equals 120 second interval); and to clean up old NAR data
 #               if desired.
 #
-# Version:      4.0
+# Version:      4.0.1
 #
 # Author:       Evan R Battle
 #               Sr. Systems Engineer
 #               EMC Corporation
 #               evan.battle@emc.com
 #
-# Created:     11/22/2014
+# Created:     12/5/2014
 # Copyright:   (c) Evan R. Battle 2014
 # Licence:     This code is open and free to be modified.
 #-------------------------------------------------------------------------------
