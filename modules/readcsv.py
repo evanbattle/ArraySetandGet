@@ -29,7 +29,6 @@ class ReadCSV:
         result = _FileCheck(csvfile)
 
         if result is 0:
-            print options['LDAP_USER']
             if options['LDAP_USER'] != None:
                 f = open(csvfile, 'r')
                 r = csv.reader(f)
@@ -39,13 +38,18 @@ class ReadCSV:
                     arr_passwd.append(options['LDAP_PASS'])
                     arr_scope.append('2')
             else:
-                f = open(csvfile, 'r')
-                r = csv.reader(f)
-                for row in _skip_blank(r):
-                    arr_host.append(row[0])
-                    arr_uname.append(row[1])
-                    arr_passwd.append(row[2])
-                    arr_scope.append(row[3])
+                try:
+                    f = open(csvfile, 'r')
+                    r = csv.reader(f)
+                    for row in _skip_blank(r):
+                        arr_host.append(row[0])
+                        arr_uname.append(row[1])
+                        arr_passwd.append(row[2])
+                        arr_scope.append(row[3])
+                except:
+                    csv_logger.critical('There was an error reading the username and/or password info, is it specified in the csv?')
+                    csv_logger.critical('exiting...')
+                    sys.exit(1)
             self.uname = arr_uname
             self.passwd = arr_passwd
             self.host = arr_host
