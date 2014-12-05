@@ -81,11 +81,15 @@ Running ArraySetandGet
    
       ArraySetandGet <LDAP_UserID> <LDAP_Password> --csv=<file_containg_SP_addresses> --set --ns
       
-![alt tag](https://github.com/evanbattle/XtremIOSnap/blob/master/images/encode.png)
+![alt tag](https://github.com/evanbattle/imagefiles/blob/master/ArraySetandGet1.png)
+
+![alt tag](https://github.com/evanbattle/imagefiles/blob/master/ArraySetandGet2.png)
    
       ArraySetandGet <LDAP_UserID> <LDAP_Password> --csv=<file_containg_SP_addresses> --get
       
-![alt tag](https://github.com/evanbattle/XtremIOSnap/blob/master/images/folder_snap.png)
+![alt tag](https://github.com/evanbattle/imagefiles/blob/master/ArraySetandGet_get1.png)
+
+![alt tag](https://github.com/evanbattle/imagefiles/blob/master/ArraySetandGet_get2.png)
 
 Contributing
 -----------
