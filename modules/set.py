@@ -56,11 +56,12 @@ def ScriptSet(log,array,user,passwd,scope,options):
             else:
                 PeriodicArchive,PAerrcode = cli._GetPeriodicArchive()
                 scriptset_logger.info('Periodic Archiving:\t'+PeriodicArchive)
+
             if options['--ni'] != None:
-                NARInterval = options['--ni']
-                if NARInterval == '120':
+                if NARInterval == options['--ni']:
                     scriptset_logger.info('NAR Polling Interval is correctly set to:\t' + NARInterval)
                 else:
+                    NARInterval = options['--ni']
                     scriptset_logger.info('****Modifying the Archive Poll interval to:\t' + NARInterval)
                     mod = mod + 1
             if LogDays != 'nonstop':
